@@ -13,7 +13,7 @@
 
 <script>
 	// JavaScript code goes here
-  var canvas = document.getElementById("myCanvas");
+	var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 var ballRadius = 10;
 var x = canvas.width/2;
@@ -25,13 +25,13 @@ var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth)/2;
 var rightPressed = false;
 var leftPressed = false;
-var brickRowCount = 2;
+var brickRowCount = 3;
 var brickColumnCount = 4;
 var brickWidth = 90;
 var brickHeight = 35;
 var brickPadding = 10;
-var brickOffsetTop = 110;
-var brickOffsetLeft = 120;
+var brickOffsetTop = 60;
+var brickOffsetLeft = 50;
 var score = 0;
 
 var bricks = [];
@@ -124,25 +124,25 @@ function drawWin() {
 function drawHappy() {
   ctx.font = "16px Arial";
   ctx.fillStyle = "0095DD";
-  ctx.fillText("Happy", 220, 130);
+  ctx.fillText("Happy", 150, 130);
 }
 
 function drawAnniversary() {
   ctx.font = "16px Arial";
   ctx.fillStyle = "0095DD";
-  ctx.fillText("Anniversary!", 320, 130);
+  ctx.fillText("Anniversary!", 250, 130);
 }
 
 function drawLove() {
   ctx.font = "16px Arial";
   ctx.fillStyle = "0095DD";
-  ctx.fillText("Love,", 220, 180);
+  ctx.fillText("Love,", 150, 180);
 }
 
 function drawD() {
   ctx.font = "16px Arial";
   ctx.fillStyle = "0095DD";
-  ctx.fillText("Dale", 320, 180);
+  ctx.fillText("Dale", 250, 180);
 }
 
 
@@ -249,6 +249,7 @@ function draw() {
 var interval = setInterval(draw, 10);
 
 
+ 
 
   
 </script>
