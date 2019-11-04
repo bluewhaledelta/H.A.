@@ -179,8 +179,12 @@ function drawBricks() {
       bricks[c][r].x = brickX;
       bricks[c][r].y = brickY;
       ctx.beginPath();
+      ctx.lineJoin = "round";
+      ctx.globalCompositeOperation = "lighter";
+      ctx.shadowBlur = 10;  
       ctx.rect(brickX, brickY, brickWidth, brickHeight);
-      ctx.fillStyle = "#0095DD";
+      ctx.shadowColor = "white";
+      ctx.fillStyle = "orange";  
       ctx.fill();
       ctx.closePath();
       }
